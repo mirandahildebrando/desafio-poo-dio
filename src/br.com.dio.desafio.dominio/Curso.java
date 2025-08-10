@@ -10,6 +10,9 @@ public class Curso extends Conteudo {
         return cargaHoraria;
     }
     public void setCargaHoraria(int cargaHoraria) {
+        if (cargaHoraria <= 0) {
+            throw new IllegalArgumentException("Carga horária não pode ser negativa.");
+        }
         this.cargaHoraria = cargaHoraria;
     }
     @Override
